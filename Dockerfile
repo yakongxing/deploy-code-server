@@ -9,7 +9,7 @@ FROM bencdr/code-server-deploy-container:latest
 
 # Install NodeJS
 RUN sudo curl -fsSL https://deb.nodesource.com/setup_15.x | sudo bash -
-RUN sudo apt-get install -y nodejs
+RUN sudo apt-get install -y nodejs wget
 
 # heroku-cli
 RUN curl https://cli-assets.heroku.com/install.sh | sh
