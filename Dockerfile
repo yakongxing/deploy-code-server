@@ -9,10 +9,10 @@ FROM bencdr/code-server-deploy-container:latest
 
 # Install NodeJS
 RUN sudo curl -fsSL https://deb.nodesource.com/setup_15.x | sudo bash -
-RUN sudo apt-get install -y nodejs wget
+RUN sudo apt-get install -y nodejs wget vim
 
 # heroku-cli
 RUN curl https://cli-assets.heroku.com/install.sh | sh
 
 RUN cd /tmp && wget https://github.com/fatedier/frp/releases/download/v0.35.1/frp_0.35.1_linux_amd64.tar.gz && tar -xvf frp_0.35.1_linux_amd64.tar.gz && rm -rf frp_0.35.1_linux_amd64.tar.gz \
-  && sudo mkdir /frp &&  cp -R /tmp/frp_0.35.1_linux_amd64 /frp
+  && sudo mkdir /frp &&  cp -R /tmp/frp_0.35.1_linux_amd64/* /frp
